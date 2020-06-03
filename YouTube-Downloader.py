@@ -14,13 +14,13 @@ def video(option):
 	url = YouTube(input("Enter the Url: "))
 	if option == 1:
 		url.streams.get_highest_resolution().download()
-		elif option == 2:
+	elif option == 2:
 			url.streams.filter(only_audio=True)[-1].download()
 
 
 def main():
-	option1 = input("What do you want to download: \n[1] Video \n[2] Playlist")
-	option2 = input("Do you want it to be Audio or Original: \n[1] Original \n[2] Audio")
+	option1 = input("What do you want to download: \n[1] Video \n[2] Playlist\n:")
+	option2 = input("Do you want it to be Audio or Original: \n[1] Original \n[2] Audio\n:")
 	if option1 == "1":
 		if option2 == "1":
 			video(1)
